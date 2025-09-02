@@ -60,7 +60,7 @@ cd simple-pastebin-flask
 
 ```bash
 pkg install python-pip
-pip install flask
+pip install -r requirements.txt
 ```
 ### 🚀 Running🏃
 <summary><code>Run Menggunakan Python?</code></summary>
