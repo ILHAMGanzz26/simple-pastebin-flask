@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Pastebin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex flex-col items-center p-4">
+  <div class="w-full max-w-md sm:max-w-2xl bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-2xl shadow-lg">
+    <h1 class="text-2xl sm:text-3xl font-bold text-center mb-6">Simple Pastebin</h1>
+    <form method="POST" class="space-y-4">
+      <input name="name" placeholder="Nama (Opsional)" class="w-full p-2 rounded border dark:bg-gray-700" />
+
+      <textarea name="content" rows="10" placeholder="Tulis teks / kode di sini..."
+        class="w-full p-2 rounded border dark:bg-gray-700"></textarea>
+
+      <div class="flex flex-col sm:flex-row gap-4">
+        <select name="language" class="flex-1 p-2 rounded border dark:bg-gray-700">
+          <option value="text">Text</option>
+          <option value="python">Python</option>
+          <option value="javascript">JavaScript</option>
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+        </select>
+        <select name="expire" class="flex-1 p-2 rounded border dark:bg-gray-700">
+          <option value="never">Permanent</option>
+          <option value="10m">10 Menit</option>
+          <option value="1h">1 Jam</option>
+          <option value="1d">1 Hari</option>
+        </select>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <input type="checkbox" id="use_password" name="use_password" class="h-4 w-4">
+        <label for="use_password" class="text-sm">Gunakan Password</label>
+      </div>
+      <input type="password" name="password" placeholder="Password (opsional)"
+        class="w-full p-2 rounded border dark:bg-gray-700">
+
+      <button type="submit"
+        class="w-full py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition">
+        🚀 Buat Paste
+      </button>
+    </form>
+  </div>
+  <footer class="mt-6 text-xs text-gray-500 dark:text-gray-400">Created by ILHAM A.</footer>
+</body>
+</html>
